@@ -2,9 +2,9 @@
   
    Program wrfchembc.
   
-       Original source of unknown date:
-   Authors:  Rainer Schmitz (University of Chile - Santiago, Chile)
-             Steven Peckham (NOAA/ESRL/GSD - Boulder, CO)
+For more information, contact Martha Butler or Thomas Lauvaux (tul5@psu.edu), The Pennsylvania State University.
+
+Original source of unknown date. Authors: Rainer Schmitz (University of Chile - Santiago, Chile) Steven Peckham (NOAA/ESRL/GSD - Boulder, CO)
   
    This code has been liberally adapted at Penn State to support the 'nesting' of 
    a WRF domain within a global model, for the purpose of populating the boundaries
