@@ -67,8 +67,9 @@ Original source of unknown date. Authors: Rainer Schmitz (University of Chile - 
                                                       specname = 'tracer_n' where n is the tracer number
                                                       tracer name must match the variable name in wrfbdy file
   
-                                                      The following are used only for chem_bc_opt = 1
-                                                      and may be omitted for options 2 and 3
+The following are used only for chem_bc_opt = 1
+and may be omitted for options 2 and 3
+
    dir_global = '/data/global_data/'                 ! Global model data directory example
    fn_global  = 'ts20100607.nc'                      ! Global model data file name example
    
