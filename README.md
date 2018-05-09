@@ -18,7 +18,8 @@ GEOS-Chem is a grass-roots community model owned by its users, and ownership imp
 To download the code sources and users' guides, visit the webpage: 
 http://acmg.seas.harvard.edu/geos/
 
-The version of the wrfchembc code for GEOS-Chem has been archived in "psu-inversion/WRF_boundary_coupling/wrfchem_GEOS_pkg.tar"
+The version of the wrfchembc code for GEOS-Chem has been archived in:
+"psu-inversion/WRF_boundary_coupling/wrfchem_GEOS_pkg.tar"
 
 Main source code "main_bc_wrfchem_GEOS.f90"
 
@@ -38,7 +39,8 @@ https://www.esrl.noaa.gov/gmd/ccgg/carbontracker/index.php
 To access the original CarbonTracker model outputs, please visit:
 https://www.esrl.noaa.gov/gmd/ccgg/carbontracker/molefractions.php
 
-The version of the wrfchembc code for CarbonTracker has been archived "psu-inversion/WRF_boundary_coupling/wrfchem_CT_pkg.tar"
+The version of the wrfchembc code for CarbonTracker has been archived in:
+"psu-inversion/WRF_boundary_coupling/wrfchem_CT_pkg.tar"
 
 Main source code "main_bc_wrfchem_CT.f90"
 
