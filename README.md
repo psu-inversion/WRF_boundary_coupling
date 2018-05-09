@@ -1,8 +1,13 @@
 # WRF_boundary_coupling
 
-Fortran code to couple global model passive tracer fields to WRF boundaries
-Please read the general Readme file first:
-psu-inversion/WRF_boundary_coupling/README.md
+Fortran code to couple global model passive tracer fields to WRF boundaries. Version modified for passive tracers
+
+For more information, contact Martha Butler or Thomas Lauvaux (tul5@psu.edu), The Pennsylvania State University.
+
+Original source of unknown date. Authors: Rainer Schmitz (University of Chile - Santiago, Chile) Steven Peckham (NOAA/ESRL/GSD - Boulder, CO)
+
+This code has been liberally adapted at Penn State to support the 'nesting' of a WRF domain within a global model, for the purpose of populating the boundaries (in wrfbdy) with a tracer from the global model. wrfchembc has versions specific to the global model being used for the problem. 
+
 
 
 
