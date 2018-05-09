@@ -62,18 +62,17 @@
   
    chem_bc_opt = 1 (or 2 or 3)                       ! 1=global model, 2=fixed constant, 3=zero
   
-   specname = 'tracer_8'                             ! identification of the tracer to be updated in wrfbdy
-                                                     ! specname = 'tracer_n' where n is the tracer number
-                                                     ! tracer name must match the variable name in wrfbdy file
+   specname = 'tracer_8'                             
+   # identification of the tracer to be updated in wrfbdy
+   # specname = 'tracer_n' where n is the tracer number
+   # tracer name must match the variable name in wrfbdy file
   
-                                                     ! The following are used only for chem_bc_opt = 1
-                                                     ! and may be omitted for options 2 and 3
-   dir_global = '/data/global_data/'                 ! Global model data directory example
-   fn_global  = 'CT2016_2010-0607.nc'                ! Global model data file name example
+   The following are used only for chem_bc_opt = 1
+   and may be omitted for options 2 and 3
+   dir_global = '/data/global_data/'                 # Global model data directory example
+   fn_global  = 'CT2016_2010-0607.nc'                # Global model data file name example
    
    
-   /
-  
    To compile, type "make". The make file is set-up to compile the code for a 
    single processor using the Intel compiler (We assume you are using a 
    linux cluster).  The Makefile will need to be modified to work with other 
