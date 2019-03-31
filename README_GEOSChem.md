@@ -1,6 +1,6 @@
   DESCRIPTION
   
-   Program wrfchembc.
+#  Program wrfchembc.
   
     
 For more information, contact Martha Butler or Thomas Lauvaux (tul5@psu.edu), The Pennsylvania State University.
@@ -33,8 +33,8 @@ Original source of unknown date. Authors: Rainer Schmitz (University of Chile - 
    to the beginning date of the wrfinput/wrfbdy files.
    It is up to the user to specify the correct 2-month global source file
    in the namelist control.
-   For the TM5 and GEOS-Chem based files, the global file time increment (dt_g) is 3 hours.
-   The wrfbdy time increment (dt_w) is 6 hours.
+   For the TM5 and GEOS-Chem based files, the global file time increment (`dt_g`) is 3 hours.
+   The wrfbdy time increment (`dt_w`) is 6 hours.
    Appropriate global file time incrments will be averaged to the wrfbdy time step.
    This code can accommodate either 00 UTC or 12 UTC start times.
   
@@ -47,14 +47,15 @@ Original source of unknown date. Authors: Rainer Schmitz (University of Chile - 
                              to surface-top before use)
  
    The wrfchembc package consists of this 'main' code plus:
-   module_GEOS_lib.f90:       but, use the module specific to global model
-                             currently either module_GEOS_lib.f90 or module_CT_lib.f90 
+   `module_GEOS_lib.f90`:       but, use the module specific to global model
+                             currently either `module_GEOS_lib.f90` or `module_CT_lib.f90`
                              Most procedures in the global model module will be referred to as 'global'
-    module_wrfchem_lib.f90:  This contains wrf specific procedures and should not need to be modified.
-    wrfchembc_namelist.input
-    Makefile
+    `module_wrfchem_lib.f90`:  This contains wrf specific procedures and should not need to be modified.
+    `wrfchembc_namelist.input`
+    `Makefile`
   
    The namelist input data file for the program is structured as follows with examples:
+   ```fortran
    &control
    
    dir_wrf = '/data/wrfchem_data/'                   ! Directory containing the wrfinput and wrfbdy files
@@ -72,7 +73,7 @@ and may be omitted for options 2 and 3
 
    dir_global = '/data/global_data/'                 ! Global model data directory example
    fn_global  = 'ts20100607.nc'                      ! Global model data file name example
-   
+   ```
    
   
   
@@ -84,6 +85,6 @@ and may be omitted for options 2 and 3
   
    To execute the program, type 
   
-    wrfchembc_GEOS < wrfchembc_namelist.input
+   `wrfchembc_GEOS < wrfchembc_namelist.input`
   
  
