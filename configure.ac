@@ -27,8 +27,11 @@ fi
 # Checks for header files.
 
 # Checks for typedefs, structures, and compiler characteristics.
+AX_FCFLAGS_WARN_ALL()
 
 # Checks for library functions.
+
+# Check which programs to build
 if test "x${ax_is_release}" = "xno"
 then
   AX_CONFIG_FEATURE_DEFAULT_ENABLED
