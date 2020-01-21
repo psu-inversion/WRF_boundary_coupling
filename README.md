@@ -49,3 +49,18 @@ Main source code "[main_bc_wrfchem_CT.f90](main_bc_wrfchem_CT.f90)"
 
 Please refer to [README_CT.md](README_CT.md) for more instructions.
 
+## Alternate Build System
+This package now provides an Autotools build system.  To build the
+executables, execute:
+
+```bash
+autoreconf
+./configure --enable-geos-chem --enable-carbontracker
+make
+```
+
+
+Those building from a release rather than from the development sources
+can skip the first line.  Those who are using only one of the
+atmospheric models can disable building the program for the other
+model by changing the corresponding `enable` to `disable`.
