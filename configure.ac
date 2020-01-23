@@ -41,13 +41,13 @@ AX_CONFIG_FEATURE([geos-chem], [turns on/off GEOS-Chem support],
 AX_CONFIG_FEATURE([carbontracker], [turns on/off CarbonTracker support],
                   BUILD_CARBONTRACKER, [Define if you want CarbonTracker support])
 
-if test x${ax_config_feature_geos_chem} = xno -a x${ax_config_feature_carbontracker} = xno
+if test "x${ax_config_feature_geos_chem}" = xno -a "x${ax_config_feature_carbontracker}" = xno
 then
     AC_MSG_WARN([No programs selected for build])
 fi
 
-AM_CONDITIONAL([GEOSCHEM], [test x${ax_config_feature_geos_chem} = xyes])
-AM_CONDITIONAL([CARBONTRACKER], [test x${ax_config_feature_carbontracker} = xyes])
+AM_CONDITIONAL([GEOSCHEM], [test "x${ax_config_feature_geos_chem}" = xyes])
+AM_CONDITIONAL([CARBONTRACKER], [test "x${ax_config_feature_carbontracker}" = xyes])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
