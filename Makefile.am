@@ -11,7 +11,8 @@ bin_PROGRAMS += wrfchembc_CT
 endif
 
 AM_FCFLAGS = $(NETCDF4_FFLAGS)
-AM_LDFLAGS = $(NETCDF4_LDFLAGS) $(NETCDF4_FLIBS) $(NETCDF4_LIBS)
+AM_LDFLAGS = $(NETCDF4_LDFLAGS)
+LDADD = $(NETCDF4_FLIBS) $(NETCDF4_LIBS)
 
 wrfchembc_GEOS_SOURCES = module_GEOS_lib.f90 module_wrfchem_lib.f90 main_bc_wrfchem_GEOS.f90
 wrfchembc_CT_SOURCES = module_CT_lib.f90 module_wrfchem_lib.f90 main_bc_wrfchem_CT.f90
