@@ -19,10 +19,8 @@ AC_PROG_FC
 # Checks for libraries.
 AX_LIB_NETCDF4()
 
-if test "x${with_netcdf4_fortran}" = "xno"
-then
-    AC_MSG_ERROR([Can't find NetCDF4 Fortran bindings])
-fi
+AS_IF([test "x${with_netcdf4_fortran}" = "xno"],
+      [AC_MSG_ERROR([Can't find NetCDF4 Fortran bindings])])
 
 # Checks for header files.
 
@@ -32,22 +30,17 @@ AX_FCFLAGS_WARN_ALL()
 # Checks for library functions.
 
 # Check which programs to build
-if test "x${ax_is_release}" = "xno"
-then
-  AX_CONFIG_FEATURE_DEFAULT_ENABLED
-else
-  AX_CONFIG_FEATURE_DEFAULT_DISABLED
-fi
+AS_IF([test "x${ax_is_release}" = "xno"],
+      [AX_CONFIG_FEATURE_DEFAULT_ENABLED],
+      [AX_CONFIG_FEATURE_DEFAULT_DISABLED])
 
 AX_CONFIG_FEATURE([geos-chem], [turns on/off GEOS-Chem support],
 	          BUILD_GEOSCHEM, [Define if you want GEOS-Chem support])
 AX_CONFIG_FEATURE([carbontracker], [turns on/off CarbonTracker support],
                   BUILD_CARBONTRACKER, [Define if you want CarbonTracker support])
 
-if test "x${ax_config_feature_geos_chem}" = xno -a "x${ax_config_feature_carbontracker}" = xno
-then
-    AC_MSG_WARN([No programs selected for build])
-fi
+AS_IF([test ! '(' "x${ax_config_feature_geos_chem}" = xyes -o "x${ax_config_feature_carbontracker}" = xyes ')' ],
+      [AC_MSG_WARN([No programs selected for build])])
 
 AM_CONDITIONAL([GEOSCHEM], [test "x${ax_config_feature_geos_chem}" = xyes])
 AM_CONDITIONAL([CARBONTRACKER], [test "x${ax_config_feature_carbontracker}" = xyes])
