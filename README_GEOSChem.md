@@ -47,7 +47,7 @@ Original source of unknown date. Authors: Rainer Schmitz (University of Chile - 
                              to surface-top before use)
  
    The wrfchembc package consists of this 'main' code plus:
-   `module_GEOS_lib.f90`:       but, use the module specific to global model
+   `module_GEOS_lib.f90`:    but, use the module specific to global model
                              currently either `module_GEOS_lib.f90` or `module_CT_lib.f90`
                              Most procedures in the global model module will be referred to as 'global'
     `module_wrfchem_lib.f90`:  This contains wrf specific procedures and should not need to be modified.
