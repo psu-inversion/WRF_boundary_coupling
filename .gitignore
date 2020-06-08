@@ -1,0 +1,23 @@
+# Backups
+*~
+
+# Build process artifacts
+
+# Autoreconf
+Makefile.in
+configure
+aclocal.m4
+autom4te.cache
+
+# configure
+config.log
+config.status
+Makefile
+
+# make
+*.mod
+*.o
+
+# make dist distcheck
+WRF_boundary_coupling-*.tar*
+WRF_boundary_coupling-*.zip

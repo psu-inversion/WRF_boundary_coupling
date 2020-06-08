@@ -1,0 +1,34 @@
+.SUFFIXES: .o .F .f .f90
+
+F90    = ifort -g 
+LIBS   = -L/usr/global/netcdf-fortran-4.4.2-intel/lib -lnetcdff -L/usr/global/hdf5-1.8.16/lib -L/usr/global/netcdf-4.4.0-intel/lib -lnetcdf -lnetcdf
+INCLUDE_MODULES = -I/usr/global/netcdf-fortran-4.4.2-intel/include
+
+
+#F90     = /usr/global/pgi-11.9/linux86-64/11.9/bin/pgf90 -g
+#LIBS   = -L/usr/global/netcdf-fortran-4.4.1-pgi/lib -lnetcdff -L/usr/global/hdf5-1.8.14/lib -L/usr/global/netcdf-4.3.3rc2-pgi/lib -lnetcdf -lnetcdf
+#INCLUDE_MODULES = -I/usr/global/netcdf-fortran-4.4.1-pgi/include
+
+FFLAGS =
+
+EXEC = wrfchembc_GEOS 
+
+
+OBJS = module_GEOS_lib.o \
+       module_wrfchem_lib.o \
+       main_bc_wrfchem_GEOS.o
+
+##dependencies
+#$(OBJECTS) : makefile
+
+
+${EXEC} :       ${OBJS}
+		${F90} -o $@ ${FFLAGS} ${OBJS} ${LIBS} 
+
+.f.o:
+		${F90} ${FFLAGS} -c $<
+.f90.o:
+		${F90} ${FFLAGS} -c ${INCLUDE_MODULES} $<
+
+clean:
+		rm -f core ${EXEC} ${OBJS} *.mod
